@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-               
                 git branch: "master", url:"https://github.com/HansM7/test-backend-for-jenkis.git"
             }
         }
