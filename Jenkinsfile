@@ -12,8 +12,11 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sshagent(["ssh-agent"]){
-                    sh "scp -r./* root@161.132.38.235:/home/ubuntu"
+              
+                sshagent(["ssh-agent"]) {
+                    sh """
+                        scp -r ./* root@161.132.38.235:/root/
+                    """
                 }
             }
         }
