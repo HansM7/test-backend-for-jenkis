@@ -4,9 +4,11 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: "main", url:"https://github.com/HansM7/test-backend-for-jenkis.git"
+                checkout([$class: 'GitSCM',
+                    branches: [[name: '*/main']], // Cambia 'main' por 'master' si corresponde
+                    userRemoteConfigs: [[url: 'https://github.com/HansM7/test-backend-for-jenkis.git']]
+                ])
             }
         }
-      
     }
 }
