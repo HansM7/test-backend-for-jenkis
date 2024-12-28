@@ -9,7 +9,11 @@ app.get("/api/first", (req, res) => {
 });
 
 app.get("/api/second", (req, res) => {
-  res.json({ message: "Hello" });
+  res.json({ message: "Hello 2" });
+});
+
+app.get("/api/third", (req, res) => {
+  res.json({ message: "Hello 3" });
 });
 
 app.listen(4000, () => {
