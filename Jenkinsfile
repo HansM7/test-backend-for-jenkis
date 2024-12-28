@@ -16,13 +16,13 @@ pipeline {
                 sshagent(["ssh-agent"]) {
                     sh """
                         # Crear directorio si no existe
-                        ssh -o StrictHostKeyChecking=no root@161.132.38.235 'mkdir -p /ruta/app'
+                        ssh -o StrictHostKeyChecking=no root@161.132.38.235 'mkdir -p /home/app-backend'
                         
                         # Copiar archivos
-                        scp -o StrictHostKeyChecking=no -r ./* root@161.132.38.235:/ruta/app/
+                        scp -o StrictHostKeyChecking=no -r ./* root@161.132.38.235:/home/app-backend/
                         
                         # Verificar la copia
-                        ssh -o StrictHostKeyChecking=no root@161.132.38.235 'ls -la /ruta/app'
+                        ssh -o StrictHostKeyChecking=no root@161.132.38.235 'ls -la /home/app-backend
                     """
                 }
             }
