@@ -15,7 +15,7 @@ pipeline {
               
                 sshagent(["ssh-agent"]) {
                     sh """
-                        scp -r ./* root@161.132.38.235:/root/
+                        scp -r ./* root@161.132.38.235:/
                     """
                 }
             }
