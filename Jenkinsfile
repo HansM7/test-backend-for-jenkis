@@ -58,7 +58,7 @@ pipeline {
                             pm2 delete app-backend || true
                             
                             # Iniciar la aplicación con PM2
-                            pm2 start index.js --name app-backend
+                            pm2 start "npm run dev" --name app-backend
                             
                             # Guardar la configuración de PM2
                             pm2 save
