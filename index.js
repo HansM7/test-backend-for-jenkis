@@ -15,6 +15,9 @@ app.get("/api/second", (req, res) => {
 app.get("/api/third", (req, res) => {
   res.json({ message: "Hello 3" });
 });
+app.get("/api/third", (req, res) => {
+  res.json({ message: "Hello 3" });
+});
 
 app.listen(4000, () => {
   console.log("App is running in port 4000");
